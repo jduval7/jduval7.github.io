@@ -1,0 +1,338 @@
+body {
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+   
+}
+
+#graphic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 5px;
+    z-index: -1;
+    position: relative;
+
+}
+
+nav {
+    background-color: rgb(250, 248, 248);
+    color: chartreuse;
+}
+
+.nav-link {
+    color: chartreuse;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.navbar-toggler-icon {
+    color: chartreuse;
+}
+
+#cards {
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-top: 2.5em;
+}
+
+.card-img-top:hover {
+    opacity: 0.8;
+  }
+
+#cards2 {
+    margin-top: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* 3D Slideshow */ 
+
+    
+
+    
+    #slideshow {
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 600px;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 3rem;
+    }
+    
+    .slideshow-title {
+    font-family: 'Allerta Stencil';
+    font-size: 62px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25%;
+    letter-spacing: 3px;
+    font-weight: 300;
+    }
+    
+    .sub-heading {
+    padding-top: 50px;
+    font-size: 18px;
+    } .sub-heading-two {
+    font-size: 15px;
+    } .sub-heading-three {
+    font-size: 13px;
+    } .sub-heading-four {
+    font-size: 11px;
+    } .sub-heading-five {
+    font-size: 9px;
+    } .sub-heading-six {
+    font-size: 7px;
+    } .sub-heading-seven {
+    font-size: 5px;
+    } .sub-heading-eight {
+    font-size: 3px;
+    } .sub-heading-nine {
+    font-size: 1px;
+    }
+    
+    .entire-content {
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+    }
+    
+    .content-carrousel {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 18s infinite linear;
+    transform-style: preserve-3d;
+    }
+    
+    .content-carrousel:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+    }
+    
+    .content-carrousel figure {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #3b444b;
+    overflow: hidden;
+    position: absolute;
+    }
+    
+    .content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(500px); 
+    } .content-carrousel figure:nth-child(10) {
+    transform: rotateY(360deg) translateZ(500px); 
+    } 
+    
+    .shadow {
+        position: absolute;
+        box-shadow: 0px 0px 20px 0px #000;
+        border-radius: 1px;
+    }
+    
+    .content-carrousel img {
+    image-resolution: from-image;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .content-carrousel img:hover {
+    transform: scale(1.8);
+    transition: all 300ms;
+    }
+    
+    @keyframes rotar {
+    from {
+    transform: rotateY(0deg);
+    } to {
+    transform: rotateY(360deg);
+    }
+    }
+
+    #shoes {
+        max-width: 20%;
+    }
+
+    #future {
+        padding-top: 34.75em;
+        padding-left: 3.1em;
+        z-index: 1;
+        position: absolute;
+    }
+
+    #corner {
+        position: absolute;
+        padding-top: 3em;
+        padding-left: 79em;
+        width: 83%;
+        height: auto;
+    }
+
+    #nikeair {
+        padding-top: 2.3em;
+        padding-left: 8em;
+        z-index: 1;
+        position: relative;
+    }
+
+    #spaceman {
+        padding-top: 6em;
+        width: 63%;
+        height: 95%;
+        right: 3em;
+        position: absolute;
+        z-index: 3;
+    }
+
+    #nikediv {
+        position: relative;
+    }
+
+
+    footer {
+        background: #222;
+        color: #aaa;
+        padding-top: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      
+      footer a {
+        color: #aaa;
+      }
+      
+      footer a:hover {
+        color: #fff;
+      }
+      
+      footer h3 {
+       color: rgb(214, 175, 230);
+        letter-spacing: 1px;
+        margin: 30px 0 20px;
+      }
+      
+      footer .three-column {
+       overflow: hidden;
+      }
+      
+      footer .three-column li{
+       width: 33.3333%;
+        float: left;
+        padding: 5px 0;
+      }
+      
+      footer .socila-list {
+        overflow: hidden;
+        margin: 20px 0 10px;
+      }
+      
+      footer .socila-list li {
+        float: left;
+        margin-right: 3px;
+        opacity: 0.7;
+        overflow: hidden;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      footer .socila-list li:hover {
+        opacity: 1;
+      }
+      
+      footer .img-thumbnail {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid #444;
+        margin-bottom: 5px;
+      }
+      
+      footer .copyright {
+        padding: 15px 0;
+        background: #333;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      
+      footer .copyright span {
+        color: #eabcf8;
+      }
+
+      #cards2 {
+          padding-bottom: 3em;
+      }
+
+      #socials img {
+          width: 3em;
+          height: 3em;
+      }
+
+      .img-thumbnail {
+        width: 150px;
+        height: 150px;
+      }
+
+      .media img {
+          width: 64px;
+          height: 64px;
+      }
+
+      div.card-body {
+        background-color: rgb(123, 9, 146);
+        color: rgb(194, 192, 192);
+        text-align: center;
+    }
+
+    #squat {
+        padding-top: 3em;
+        width: 65%;
+        position: relative;
+        left: 100px;
+
+    }
+
+    #squatright {
+        padding-top: 3em;
+        width: 65%;
+        position: absolute;
+        left: 400px;
+        height: 100%;
+    
+    }
+
+    #squatdiv {
+        position: relative;
+    }
+
+    #justdoit {
+        position: absolute;
+        width: 50%;
+        top: 100px;
+        left: 150px;
+    }

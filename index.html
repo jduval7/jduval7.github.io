@@ -1,129 +1,73 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Duval Developed | Welcome</title>
-<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-<style>
-  body {background-color: rgb(100, 185, 174);}
-  header {background-color: rgb(219, 176, 230);}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+	<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+	<script src="animateTest.js"></script>
+	<script>
+	var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+	function init() {
+		canvas = document.getElementById("canvas");
+		anim_container = document.getElementById("animation_container");
+		dom_overlay_container = document.getElementById("dom_overlay_container");
+		var comp=AdobeAn.getComposition("70080DFD456E433580FD39724E083E6A");
+		var lib=comp.getLibrary();
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+		loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+		var lib=comp.getLibrary();
+		loader.loadManifest(lib.properties.manifest);
+	}
+	function handleFileLoad(evt, comp) {
+		var images=comp.getImages();	
+		if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+	}
+	function handleComplete(evt,comp) {
+		//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+		var lib=comp.getLibrary();
+		var ss=comp.getSpriteSheet();
+		var queue = evt.target;
+		var ssMetadata = lib.ssMetadata;
+		for(i=0; i<ssMetadata.length; i++) {
+			ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+		}
+		exportRoot = new lib.Intro();
+		stage = new lib.Stage(canvas);	
+		//Registers the "tick" event listener.
+		fnStartAnimation = function() {
+			stage.addChild(exportRoot);
+			createjs.Ticker.framerate = lib.properties.fps;
+			createjs.Ticker.addEventListener("tick", stage);
+		}	    
+		//Code to support hidpi screens and responsive scaling.
+		AdobeAn.makeResponsive(true,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+		AdobeAn.compositionLoaded(lib.properties.id);
+		fnStartAnimation();
+	}
+	</script>
 </head>
-<body>
 
-<div class="top-bar">
-<div class="top-bar-left">
-<ul class="menu">
-<li class="menu-text">Duval Developed</li>
-<li><a href="#">About Me</a></li>
-<li><a href="#">Photos</a></li>
-</ul>
-</div>
-<div class="top-bar-right">
-<ul class="menu">
-<li><a href="#">Portfolio</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</div>
-</div>
 
-<div class="callout large">
-<div class="row column text-center">
-<h1>Designs for an Ever Changing World</h1>
-<p class="lead">Duval Developed can take your business to the next level.</p>
-<a href="#" class="button large">Learn More</a>
-<a href="#" class="button large hollow">Contact Us</a>
-</div>
-</div>
-<div class="row">
-<div class="medium-6 columns medium-push-6">
-<img class="thumbnail" src="IMG_3640.JPG">
-</div>
-<div class="medium-6 columns medium-pull-6">
-<h2>Who We Are</h2>
-<p>John Duval is a web developer originally from New Orleans, Louisiana.  He has been coding since 2018 and uses a variety of technologies to best suit the project and constraints.</p>
-</div>
-</div>
-<div class="row">
-<div class="medium-4 columns">
-<h3>Design</h3>
-<p>Well versed in the areas of Photoshop, Illustrator, InDesign.  We can fit your design Needs.</p>
-</div>
-<div class="medium-4 columns">
-<h3>Javascript</h3>
-<p>Dynamic solutions for your business, keeping up with the latest development trends.</p>
-</div>
-<div class="medium-4 columns">
-<h3>Marketing</h3>
-<p>From Search Engine Optimization to online marketing, we have you covered.</p>
-</div>
-</div>
-<hr>
-<div class="row column">
-<ul class="vertical medium-horizontal menu expanded text-center">
-<li><a href="#"><div class="stat">28</div><span>Websites</span></a></li>
-<li><a href="#"><div class="stat">43</div><span>Apps</span></a></li>
-<li><a href="#"><div class="stat">95</div><span>Ads</span></a></li>
-<li><a href="#"><div class="stat">59</div><span>Cakes</span></a></li>
-<li><a href="#"><div class="stat">18</div><span>Logos</span></a></li>
-</ul>
-</div>
-<hr>
-<div class="row column">
-<h3>Our Recent Work</h3>
-</div>
-<div class="row medium-up-3 large-up-4">
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-<div class="column">
-<img class="thumbnail" src="https://placehold.it/550x550">
-</div>
-</div>
-<hr>
-<div class="row column">
-<ul class="menu">
-<li><a href="#">One</a></li>
-<li><a href="#">Two</a></li>
-<li><a href="#">Three</a></li>
-<li><a href="#">Four</a></li>
-</ul>
-</div>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-<script>
-      $(document).foundation();
+<body onload="init();" style="margin:0px;">
+    <script>
+        var timer = setTimeout(function() {
+            var change = 0;
+            if (change == 0) {
+                window.location='homepage.html'
+                change += 1;
+            }
+        }, 4250);
     </script>
+
+    
+        <div id="animation_container" >
+            <canvas id="canvas" width="1370" height="768"></canvas>
+            <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1370px; height:768px; position: absolute; left: 0px; top: 0px; display: block;">
+            </div>
+        </div>
 </body>
 </html>

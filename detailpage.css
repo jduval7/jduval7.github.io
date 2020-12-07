@@ -1,0 +1,160 @@
+.container {
+    padding: 5em;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2.5fr 2.5fr 2.3fr;
+    grid-template-rows: 4fr 8fr 8fr 2fr 11fr;
+    grid-template-areas: "header header header"
+                         "image1 image2 sidebar"
+                         "image3 image4 sidebar"
+                         "sizing sizing sidebar"
+                         "checkout checkout checkout"
+                         "footer footer footer" 
+}
+
+div#footer {
+    margin: .5em;
+    grid-area: footer;
+}
+
+div#header {
+    width: 100%;
+    margin-top: none;
+    margin-bottom: 2em;
+    grid-area: header;
+    display: block;
+}
+
+
+div#image1 {
+    margin: .5em;
+    grid-area: image1;
+}
+
+div#image2 {
+    margin: .5em;
+    grid-area: image2;
+}
+
+div#image3 {
+    margin: .5em;
+    grid-area: image3;
+}
+
+div#image4 {
+    margin: .5em;
+    grid-area: image4;
+}
+
+div#sidebar {
+    margin: .5em;
+    background: rgb(21, 21, 21);
+    grid-area: sidebar;
+    padding: .5em;
+}
+
+div#sizing {
+    margin: .5em;
+    background: black;
+    grid-area: sizing;
+}
+
+div#checkout {
+    margin-top: 5em;
+    background: rgb(14, 2, 31);
+    grid-area: checkout;
+    color: rgb(196, 154, 236);
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+body {
+    background: url('images/background.jpg');
+    background-size: cover;
+}
+
+#numbers {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px black;
+    background: rgb(40, 40, 40);
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.numbers:hover{
+    opacity: 2;
+}
+
+#cart {
+    justify-content: flex-end !important;
+}
+
+#search {
+    margin-left: 1em;
+}
+
+#tall {
+    height: 68.9%;
+    padding-top: .5em;
+
+}
+
+#sidebar p {
+    color: rgb(196, 154, 236);
+    font-family: 'Roboto Condensed', sans-serif;
+        overflow: hidden;
+}
+
+#sidebar h3 {
+  color: rgb(180, 33, 161);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#fav {
+    padding-left: 10px;
+}
+
+button {
+    border-radius: 7px;
+    background: rgb(119, 50, 165);
+    color: rgb(224, 217, 217);
+    border: 1px solid rgb(65, 41, 65);
+    width: 8em;
+    height: 3em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+button:hover {
+    opacity: .6;
+    background: rgb(180, 33, 161);
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .container {
+        grid-template-areas: "header"
+                            "image1"
+                            "image2"
+                            "image3"
+                            "image4"
+                            "sidebar"
+                            "sizing"
+                            "checkout"
+    }
+
+  }
+
+ 
+  
