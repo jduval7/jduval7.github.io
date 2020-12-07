@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+.container {
+    padding: 5em;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 2.5fr 2.5fr 2fr;
+    grid-template-rows: 3fr 4fr 4fr 6fr;
+    grid-template-areas: "header header sidebar"
+                         "div1 div1 sidebar"
+                         "div2 div2 sidebar"
+                         "div3 div3 div3"
+                        
+}
+
+div#header {
+    margin-top: none;
+    margin-bottom: 2em;
+    grid-area: header;
+    width: 100%;
+    height: 100%;
+}
+
+div#div1 {
+    background: green;
+    margin-top: none;
+    margin-bottom: 1em;
+    grid-area: div1;
+}
+
+div#sidebar {
+    margin-left: 1em;
+    background: cyan;
+    margin-top: none;
+    grid-area: sidebar;
+}
+
+div#div2 {
+    background: blue;
+    margin-top: none;
+    grid-area: div2;
+}
+
+div#div3 {
+    margin-top: 2em;
+    background: purple;
+    margin-top: none;
+    
+    grid-area: div3;
+}
+
+#jordan{
+    max-width: 150px;
+}

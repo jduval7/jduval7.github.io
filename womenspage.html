@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="nike.css">
+
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="animate.js"></script>
+
+
+
+
+    <title id="shoes">Nike Womens</title>
+</head>
+<body onload="init();">
+  
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="index.html">Nike</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menspage.html">Mens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="womenspage.html">Womens</a>
+            </li>
+
+            <form class="form-inline">
+               <input class="form-control mr-sm-2 align-items-center" type="search" placeholder="Search" aria-label="Search">   
+            </form>
+          </ul>
+        </div>
+      </nav>
+    
+     
+
+
+    <div id="squatdiv">
+      <img id="squat" src="images/squat.png" alt="Just Do It Graphic">
+      <img id="squatright" src="images/squatright.png" alt="Just Do It Graphic">
+      <img id="justdoit" src="images/justdoit.png" alt="Just Do It Graphic">
+    </div>
+
+
+
+    <div id="cards">
+
+      <div id="card1" onclick="location.href='detailpage.html';" class="card" style="width: 23rem;">
+        <img src="images/automax.jpg" class="card-img-top" alt="Air Zoom Renegade">
+        <div class="card-body">
+          <h5 class="card-title">Jordan Air Zoom Renegade</h5>
+        </div>
+
+
+      </div>
+
+      <div class="card" style="width: 23rem;">
+        <img src="images/adapt.jpg" class="card-img-top" alt="Adapt Auto Max">
+        <div class="card-body">
+          <h5 class="card-title">Nike Adapt Auto Max</h5>
+        </div>
+
+
+      </div>
+
+      <div class="card" style="width: 23rem;">
+        <img src="images/delta.jpg" class="card-img-top" alt="Jordan Delta">
+        <div class="card-body">
+          <h5 class="card-title">Jordan Delta</h5>
+        </div>
+
+
+      </div>
+
+      <div class="card" style="width: 23rem;">
+        <img src="images/card.jpg" class="card-img-top" alt="Jordan Why Not? Zer0.3 SE">
+        <div class="card-body">
+          <h5 class="card-title">Jordan "Why Not?" Zer0.3 SE</h5>
+        </div>
+
+      </div>
+
+    </div> 
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade pl-5 ml-5 pr-5 mr-5 pt-5 pb-5 h-75" data-ride="carousel">
+      <div class="carousel-inner" class="d-flex justify-content-center">
+        <div id="test" class="carousel-item active " >
+          <img src="nike2.jpg" class="d-block w-100 pl-5 pr-5" style="height: 50em;" alt="Nike Shoes">
+        </div>
+        <div class="carousel-item">
+          <img src="nike3.jpg" class="d-block w-100 pl-5 pr-5"  style="height: 50em;" alt="Nike Shoes">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <div id="cards2">
+
+        <div class="card" style="width: 23rem;">
+          <img src="images/infinity.jpg" class="card-img-top" alt="Infinity Winter">
+          <div class="card-body">
+            <h5 class="card-title">Nike Air Max Infinity Winter</h5>
+          </div>
+  
+  
+        </div>
+  
+        <div class="card" style="width: 23rem;">
+          <img src="images/atmos.jpg" class="card-img-top" alt="Atmos Air mAx 2">
+          <div class="card-body">
+            <h5 class="card-title">Nike x atmos Air Max 2</h5>
+          </div>
+  
+  
+        </div>
+  
+        <div class="card" style="width: 23rem;">
+          <img src="images/af1.jpg" class="card-img-top" alt="Air Force 1 '07 LV8'">
+          <div class="card-body">
+            <h5 class="card-title">Nike Air Force 1 '07 LV8</h5>
+          </div>
+  
+  
+        </div>
+  
+        <div class="card" style="width: 23rem;">
+          <img src="images/720.jpg" class="card-img-top" alt="Air Max 720 OBJ">
+          <div class="card-body">
+            <h5 class="card-title">Nike Air Max 720 OBJ Slip</h5>
+          </div>
+  
+        </div>
+  
+      </div> 
+
+      <!-- 3D Slideshow Section --> 
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-lg-4 col-md-6">
+              <h3>Site Map</h3>
+              <ul class="list-unstyled three-column">
+                <li>Home</li>
+                <li>Services</li>
+                <li>About</li>
+                <li>Code</li>
+                <li>Design</li>
+                <li>Host</li>
+                <li>Contact</li>
+                <li>Company</li>
+              </ul>
+              <ul id="socials" class="list-unstyled socila-list">
+                <li><img src="images/instagram.png" alt="Instagram Logo" /></li>
+                <li><img src="images/facebook.png" alt="Facebook Logo" /></li>
+                <li><img src="images/snapchat.png" alt="Snaphcat Logo" /></li>
+                <li><img src="images/twitter.png" alt="Twitter Logo" /></li>
+              </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+              <h3>Promotions</h3>
+              <div class="media">
+                <a href="#" class="pull-left">
+                  <img src="images/foot1.jpg" alt="Shoes" class="media-object" />
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">30% Off Store Wide Sale</h4>
+                  <p>Save money now!</p>
+                </div>
+              </div>
+              
+              <div class="media">
+                <a href="#" class="pull-left">
+                  <img src="images/foot2.jpg" alt="Sweatpants" class="media-object" />
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Holiday Offers</h4>
+                  <p>Your loved ones deserve it!</p>
+                </div>
+              </div>
+              
+              <div class="media">
+                <a href="#" class="pull-left">
+                  <img src="images/yoga.jpg" alt="Yoga Pants" class="media-object" />
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Back in Black</h4>
+                  <p>Our latest Yoga wear is to die for!</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div id=hoodies" class="col-lg-4">
+              <h3>Items You're Sure to Love</h3>
+              <img class="img-thumbnail" src="images/hoodie.jpg" alt="Camo Hoodie" />
+              <img class="img-thumbnail" src="images/hoodie2.jpg" alt="Maroon Hoodie" />
+              <img class="img-thumbnail" src="images/hoodie3.jpg" alt="Blue Hoodie" />
+              <img class="img-thumbnail" src="images/hoodie4.jpg" alt="Long SLeeve Black Shirt" />
+            </div>
+            
+          </div>
+        </div>
+        <div class="copyright text-center">
+          Copyright &copy; 2017 <span>Nike</span>
+        </div>
+      </footer>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="homepage.js"></script>
+
+</body>
+</html>
